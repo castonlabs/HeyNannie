@@ -4,6 +4,8 @@ public enum NannieStatus {
 
     ACTIVE,
     SUSPENDED,
+    PENDING,
+    BANNED
 
 
 }

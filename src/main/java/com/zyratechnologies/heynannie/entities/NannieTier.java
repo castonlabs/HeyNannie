@@ -13,6 +13,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Table(name="nannie_tier")
+@Entity
 public class NannieTier {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
