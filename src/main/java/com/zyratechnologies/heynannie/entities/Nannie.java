@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-;
+
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -28,6 +28,7 @@ public class Nannie {
 
     @Column(nullable = false)
     private String lastName;
+
 
     @Column(nullable = false, unique = true)
     private String email;
