@@ -1,0 +1,13 @@
+package com.zyratechnologies.heynannie.enums;
+
+public enum NotificationType {
+    DOCUMENT_APPROVED,
+    DOCUMENT_REJECTED,
+    BOOKING_REQUEST,
+    BOOKING_CONFIRMED,
+    BOOKING_CANCELLED,
+    BOOKING_COMPLETED,
+    REVIEW_RECEIVED,
+    DOCUMENT_EXPIRING,
+    ACCOUNT_SUSPENDED
+}
