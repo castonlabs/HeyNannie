@@ -22,7 +22,7 @@ public class NationalId {
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "nanny_id", nullable = false, unique = true)
-    private Nannie nannie;
+    private Nanny nannie;
 
     @Column(nullable = false)
     private String idNumber;
