@@ -1,5 +1,6 @@
 package com.zyratechnologies.heynannie.entity;
 
+import com.zyratechnologies.heynannie.entities.User;
 import com.zyratechnologies.heynannie.enums.AdminRole;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -29,12 +30,6 @@ public class AdminUser {
     @Column(nullable = false)
     private String lastName;
 
-    @Column(nullable = false, unique = true)
-    private String email;
-
-    @Column(nullable = false)
-    private String password;
-
     @Column(nullable = false)
     private String phoneNumber;
 
@@ -51,6 +46,10 @@ public class AdminUser {
     @UpdateTimestamp
     @Column(nullable = false)
     private LocalDateTime updatedAt;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id", nullable = false, unique = true)
+    private User user;
 
     @PrePersist
     protected void onCreate() {
