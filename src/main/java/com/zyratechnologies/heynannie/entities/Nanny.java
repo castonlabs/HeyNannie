@@ -33,8 +33,6 @@ public class Nanny {
     @Column(nullable = false, unique = true)
     private String email;
 
-    @Column(nullable = false)
-    private String password;
 
     @Column(nullable = false)
     private String phoneNumber;
@@ -70,6 +68,9 @@ public class Nanny {
         updatedAt = LocalDateTime.now();
         status = NannieStatus.PENDING;
     }
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id", nullable = false, unique = true)
+    private User user;
 
     @PreUpdate
     protected void onUpdate() {
