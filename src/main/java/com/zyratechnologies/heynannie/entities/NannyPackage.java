@@ -23,7 +23,7 @@ public class NannyPackage {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "nanny_id", nullable = false)
-    private Nannie nannie;
+    private Nanny nannie;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "tier_id", nullable = false)
