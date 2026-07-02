@@ -24,8 +24,8 @@ public class PoliceClearance {
     @JoinColumn(name = "nanny_id", nullable = false, unique = true)
     private Nanny nanny;
 
-    @NotNull(message = " document id must not be null")
-    private int documentId;
+    @Column(nullable = false)
+    private String clearanceNumber;
 
     @Column(nullable = false)
     @NotNull(message = " document id must not be null")
@@ -40,12 +40,12 @@ public class PoliceClearance {
    @Column(nullable = false)
     private String rejectionReason;
 
-    private LocalDateTime createdAt;
+    private LocalDateTime uploadedAt;
 
     private LocalDateTime updatedAt;
 
     @PrePersist
-    protected void prePersist() {
+    protected void onCraete() {
         documentStatus = DocumentStatus.PENDING;
     }
 
